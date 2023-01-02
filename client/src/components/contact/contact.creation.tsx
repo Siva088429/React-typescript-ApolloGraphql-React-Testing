@@ -85,7 +85,7 @@ const ContactCreation: React.FunctionComponent<IOwnProps> = (
             <div className="card-text">
               <div className="form-row">
                 <div className="form-group col-md-4">
-                  <label>Name</label>
+                  <label htmlFor="name">Name</label>
                   <input
                     type="text"
                     name="name"

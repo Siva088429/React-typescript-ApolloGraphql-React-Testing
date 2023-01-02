@@ -16,7 +16,15 @@ describe("when everything is ok", () =>{
 
   test('should select the children that is being  passed to the component', () =>{
     render(<App />);
-  })
+  });
 });
+
+describe('AppRoutes',()=>{
+  test('it should be true data', () => {
+    const test = true;
+    expect(test).toBe(true);
+    render(<App/>);
+  });
+})
 
 
