@@ -62,5 +62,6 @@
     "react-error-overlay": "^6.0.9",
     "tslint": "^5.20.1",
     "tslint-react": "^4.1.0"
-  }
+  },
+  "setupFilesAfterEnv": [ "@testing-library/jest-dom/extend-expect" ]
 }

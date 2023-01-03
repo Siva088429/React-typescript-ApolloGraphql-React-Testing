@@ -3,9 +3,8 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
-import '@testing-library/jest-dom'
-import '@testing-library/jest-dom/extend-expect'
-import { configure } from '@testing-library/react'
+import '@testing-library/jest-dom';
+// import { configure } from '@testing-library/react';
 
-configure({ testIdAttribute: 'data-name' })
+// configure({ testIdAttribute: 'data-name' })
 // window.__ENV__ = {}

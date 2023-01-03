@@ -31,6 +31,21 @@ describe('When every is Ok', () =>{
         expect(handleInputChange).toBeCalledTimes(0)
         render(<App />);
     });
+    // test('render name input', () =>{
+    //     const nameElement = screen.getByText("text")
+    //     expect(nameElement).toHaveAttribute("type", "text")
+    //     render(<App />);
+    // });
 });
+
+describe('contact',()=>{
+    test('it should be true data', () => {
+      const test = true;
+      expect(test).toBe(true);
+      render(<App/>);
+    });
+});
+
+
     
 
