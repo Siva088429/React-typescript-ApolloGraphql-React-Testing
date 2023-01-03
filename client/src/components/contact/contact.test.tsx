@@ -31,11 +31,17 @@ describe('When every is Ok', () =>{
         expect(handleInputChange).toBeCalledTimes(0)
         render(<App />);
     });
-    // test('render name input', () =>{
-    //     const nameElement = screen.getByText("text")
-    //     expect(nameElement).toHaveAttribute("type", "text")
-    //     render(<App />);
-    // });
+    test('Data should be name text', () => {
+        // implicit assertion
+        // because getByText would throw error
+        // if element wouldn't be there
+        render(<App />);
+        screen.getByText('Name');
+        screen.getByRole('heading');
+        // screen.getByText('Email');
+        // screen.getByDisplayValue('dateOfBirth');
+        screen.debug();
+    });
 });
 
 describe('contact',()=>{

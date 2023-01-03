@@ -89,6 +89,7 @@ const ContactCreation: React.FunctionComponent<IOwnProps> = (
                   <input
                     type="text"
                     name="name"
+                    id="name"
                     value={contact.name}
                     placeholder="Enter name"
                     className="form-control"
