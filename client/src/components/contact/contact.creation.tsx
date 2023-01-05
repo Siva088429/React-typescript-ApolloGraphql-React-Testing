@@ -98,7 +98,7 @@ const ContactCreation: React.FunctionComponent<IOwnProps> = (
                   />
                 </div>
                 <div className="form-group col-md-4">
-                  <label>Email address</label>
+                  <label htmlFor="email">Email address</label>
                   <input
                     type="email"
                     name="email"

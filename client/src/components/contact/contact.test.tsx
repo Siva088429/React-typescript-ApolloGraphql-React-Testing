@@ -3,6 +3,9 @@ import React from 'react';
 import App from "../../App";
 import ContactCreation from "./contact.creation";
 
+const name= '';
+const email= '';
+
 describe('When every is Ok', () =>{
     test('should render the App component without crashing', () => {
         render(<App/>);
@@ -51,6 +54,22 @@ describe('contact',()=>{
       render(<App/>);
     });
 });
+
+
+// describe('Testing the page', () => {
+//     test('Able to type input', () => {
+//         const {getByLabelText} = render(<App/>);
+//         const nameInputField = getByLabelText(/Name/i);
+//         fireEvent.change(nameInputField, {target: {value: name}});
+//         expect(nameInputField).toEqual(name);
+//     });
+//     test('Able to type email', () => {
+//         const {getByText} = render(<App />);
+//         const emailInputField = getByText(/Email address/i);
+//         fireEvent.change(emailInputField, {target: {}});
+//         expect(emailInputField).toEqual(email);
+//     })
+// });
 
 
     
