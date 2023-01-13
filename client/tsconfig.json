@@ -12,12 +12,9 @@
       "stories",
       "config"
     ],
-    "typeRoots": [
-      "node_modules/@types"
-    ],
     "types": [
+      "@types/jest",
       "node",
-      "jest",
       "@testing-library/jest-dom"
     ],
     "allowJs": true,
@@ -36,7 +33,9 @@
     "noImplicitAny": false
   },
   "include": [
-    "./jest.setup.ts"
+    "src",
+    "./jest.setup.ts",
+    "./setupTests.ts"
   ],
   "exclude": [
     "node_modules",
@@ -44,6 +43,6 @@
     "docs"
   ],
   "setupFilesAfterEnv": [
-    "<rootDir>/setupTests.ts"
+    "<rootDir>/src/setupTests.ts"
   ]
 }

@@ -3,6 +3,7 @@ import { fireEvent, render,screen, configure, cleanup } from "@testing-library/r
 import React from 'react';
 import App from "../../App";
 
+
 afterEach(cleanup);
 describe('When every is Ok', () =>{
     test('should render the App component without crashing', () => {
