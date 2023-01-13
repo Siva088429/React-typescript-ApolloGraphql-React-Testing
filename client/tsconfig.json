@@ -12,10 +12,12 @@
       "stories",
       "config"
     ],
-    "typeRoots": [ "node_modules/@types" ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "types": [
-      "jest",
       "node",
+      "jest",
       "@testing-library/jest-dom"
     ],
     "allowJs": true,
@@ -28,15 +30,12 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
     "noImplicitAny": false
   },
   "include": [
-    "src",
-    "./setupTests.ts",
-    "./jest.config.ts",
     "./jest.setup.ts"
   ],
   "exclude": [
