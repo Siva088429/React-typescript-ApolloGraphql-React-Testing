@@ -19,7 +19,6 @@
     "react-router-dom": "^5.3.4",
     "react-scripts": "^3.2.0",
     "terser-webpack-plugin": "^5.3.6",
-    "ts-node": "^10.8.1",
     "typescript": "^4.6.3"
   },
   "scripts": {
@@ -53,15 +52,19 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^14.4.3",
     "@types/graphql": "^14.5.0",
-    "@types/jest": "^29.2.4",
+    "@types/jest": "^29.2.5",
     "@types/node": "^18.11.18",
     "@types/react": "^16.14.34",
     "@types/react-dom": "^16.9.17",
     "@types/react-router-dom": "^5.3.3",
     "jest-environment-jsdom": "^29.3.1",
     "react-error-overlay": "^6.0.9",
+    "ts-jest": "^29.0.4",
+    "ts-node": "^10.9.1",
     "tslint": "^5.20.1",
     "tslint-react": "^4.1.0"
   },
-  "setupFilesAfterEnv": [ "@testing-library/jest-dom/extend-expect" ]
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ]
 }

@@ -1,11 +1,9 @@
-import { fireEvent, render,screen, configure } from "@testing-library/react"
+
+import { fireEvent, render,screen, configure, cleanup } from "@testing-library/react"
 import React from 'react';
 import App from "../../App";
-import ContactCreation from "./contact.creation";
 
-const name= '';
-const email= '';
-
+afterEach(cleanup);
 describe('When every is Ok', () =>{
     test('should render the App component without crashing', () => {
         render(<App/>);
@@ -56,20 +54,80 @@ describe('contact',()=>{
 });
 
 
-// describe('Testing the page', () => {
-//     test('Able to type input', () => {
-//         const {getByLabelText} = render(<App/>);
-//         const nameInputField = getByLabelText(/Name/i);
-//         fireEvent.change(nameInputField, {target: {value: name}});
-//         expect(nameInputField).toEqual(name);
+
+
+describe('Contact', () => {
+    test('renders the contact componet', () => {
+        render(<App />);
+    });
+})
+
+describe("Save Button", () => {
+    // or something more meaningful
+    test("should handle click", () => {
+      const buttonText = "Save";
+      const testOnClick = jest.fn();
+  
+      render(
+        <input className="btn btn-outline-primary" type="submit" value="Save" onClick={testOnClick}/>
+      );
+  
+      fireEvent.click(screen.getByText(buttonText));
+  
+      expect(testOnClick).toBeCalledTimes(1);
+    });
+});
+
+describe("Update Button", () => {
+    test("Should handle to Click", () => {
+        const buttonText = "Update";
+        const testOnClick = jest.fn();
+        render(<input className="btn btn-outline-danger" type="submit" value="Update" onClick={testOnClick}/>);
+        fireEvent.click(screen.getByText(buttonText));
+        expect(testOnClick).toBeCalledTimes(1);
+    });
+});
+
+describe("Reset Button", () => {
+    test("Should handle to click", () =>{
+        const buttonText = "Reset";
+        const handleReset= jest.fn();
+        render(<input className="btn btn-outline-warning" type="button" value="Reset" onClick={handleReset} />);
+        fireEvent.click(screen.getByText(buttonText));
+        expect(handleReset).toBeCalledTimes(1);
+    });
+});
+
+
+// describe("<App />", () =>{
+//     test('render the name field', () => {
+//         render(<App />);
+//         const inputElement = screen.getByLabelText("Name");
+//         expect(inputElement).toBeInTheDocument();
+//         expect(inputElement).toHaveAttribute("type", "text");
 //     });
-//     test('Able to type email', () => {
-//         const {getByText} = render(<App />);
-//         const emailInputField = getByText(/Email address/i);
-//         fireEvent.change(emailInputField, {target: {}});
-//         expect(emailInputField).toEqual(email);
-//     })
+//     test('render the email address field', () => {
+//         render(<App />);
+//         const inputElement2 = screen.getByLabelText("Email");
+//         expect(inputElement2).toBeInTheDocument();
+//         expect(inputElement2).toHaveAttribute("type", "email");
+//     });
 // });
+
+
+// describe("input field", () => {
+//     test('render the name input field', () => {
+//         render(<App />);
+//         // const nameInput =screen.getByPlaceholderText(/Enter name/i);
+//         // expect(nameInput).toBeInTheDocument();
+//         // expect(nameInput).toHaveAttribute("type","text");
+//         expect(screen.getByText('Name')).toBeInTheDocument()
+
+//     });
+// });
+
+
+
 
 
     

@@ -88,6 +88,7 @@ const ContactCreation: React.FunctionComponent<IOwnProps> = (
                   <label htmlFor="name">Name</label>
                   <input
                     type="text"
+                    data-testid="name"
                     name="name"
                     id="name"
                     value={contact.name}
@@ -98,10 +99,11 @@ const ContactCreation: React.FunctionComponent<IOwnProps> = (
                   />
                 </div>
                 <div className="form-group col-md-4">
-                  <label htmlFor="email">Email address</label>
+                  <label data-testid="email">Email address</label>
                   <input
                     type="email"
                     name="email"
+                    data-testid="email"
                     value={contact.email}
                     placeholder="Enter email"
                     className="form-control"

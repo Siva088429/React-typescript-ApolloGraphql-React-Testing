@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter, Router } from "react-router-dom";
 import { ApolloProvider } from 'react-apollo';
+
 import { createBrowserHistory } from "history";
 
 import "bootstrap/dist/css/bootstrap.min.css";
