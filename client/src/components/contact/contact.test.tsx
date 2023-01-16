@@ -1,8 +1,8 @@
 
-import { fireEvent, render,screen, configure, cleanup } from "@testing-library/react"
+import { fireEvent, render,screen, configure, cleanup} from "@testing-library/react"
 import React from 'react';
 import App from "../../App";
-
+import '@testing-library/jest-dom/extend-expect'
 
 afterEach(cleanup);
 describe('When every is Ok', () =>{
@@ -100,33 +100,57 @@ describe("Reset Button", () => {
 });
 
 
-// describe("<App />", () =>{
-//     test('render the name field', () => {
-//         render(<App />);
-//         const inputElement = screen.getByLabelText("Name");
-//         expect(inputElement).toBeInTheDocument();
-//         expect(inputElement).toHaveAttribute("type", "text");
-//     });
-//     test('render the email address field', () => {
-//         render(<App />);
-//         const inputElement2 = screen.getByLabelText("Email");
-//         expect(inputElement2).toBeInTheDocument();
-//         expect(inputElement2).toHaveAttribute("type", "email");
-//     });
-// });
+
+describe("input field", () => {
+    test('textbox with name "name" is present', () => {
+        const { getByRole } = render(<App />);
+        const textbox = getByRole("textbox", { name: /name/i });
+        expect(textbox).toBeDefined();
+        expect(textbox).toHaveValue('');
+        expect(textbox.getAttribute("name")).toEqual("name");
+        expect(textbox).toHaveAttribute('type', 'text');
+      });
+});
 
 
-// describe("input field", () => {
-//     test('render the name input field', () => {
-//         render(<App />);
-//         // const nameInput =screen.getByPlaceholderText(/Enter name/i);
-//         // expect(nameInput).toBeInTheDocument();
-//         // expect(nameInput).toHaveAttribute("type","text");
-//         expect(screen.getByText('Name')).toBeInTheDocument()
+describe("Email field", () => {
+    test('email input field is present', () => {
+        const { getByLabelText } = render(<App />);
+        const input = getByLabelText('Email address');
+        expect(input).toBeInTheDocument();
+        expect(input).toHaveAttribute('type', 'email');
+    });
+    test('email input field accepts valid email addresses', () => {
+        const { getByLabelText } = render(<App />);
+        const input = getByLabelText('Email address') as HTMLInputElement;
+        fireEvent.change(input, { target: { value: 'example@gmail.com' } });
+        expect(input.value).toBe('example@gmail.com');
+    });   
+});
 
-//     });
-// });
+describe("Date of Brith field", () => {
+    test('date of birth input field is required', () => {
+        const { getByLabelText, getByTestId, getByText } = render(<App />);
+        const input = getByLabelText('Date of birth');
+        // const form = getByTestId("dateOfBirth")
+        fireEvent.submit(input);
+        expect(getByText("Date of birth is required")).toBeInTheDocument();
+    });
+    test('handles date of birth input change', () => {
+        const { getByTestId } = render(<App />);
+        const inputField = getByTestId('dateOfBirth') as HTMLInputElement;
+        fireEvent.change(inputField, { target: { value: '2022-01-01' } });
+        expect(inputField.value).toBe('2022-01-01');
+    });
+    test('renders date of birth label', () => {
+        const { getByTestId } = render(<App />);
+        const label = getByTestId('dateOfBirth');
+        const inputField = getByTestId('dateOfBirth');
+        expect(label).toBeInTheDocument();
+        // expect(label).toBeAssociatedWith(inputField);
+    });
 
+});
 
 
 

@@ -99,9 +99,10 @@ const ContactCreation: React.FunctionComponent<IOwnProps> = (
                   />
                 </div>
                 <div className="form-group col-md-4">
-                  <label data-testid="email">Email address</label>
+                  <label htmlFor="email">Email address</label>
                   <input
                     type="email"
+                    id="email"
                     name="email"
                     data-testid="email"
                     value={contact.email}
@@ -116,18 +117,21 @@ const ContactCreation: React.FunctionComponent<IOwnProps> = (
                   </small>
                 </div>
                 <div className="form-group col-md-4">
-                  <label>Date of birth</label>
+                  <label id="dateOfBirthLabel">Date of birth</label>
                   <input
                     type="date"
+                    data-testid="dateOfBirth"
+                    id="dateOfBirth"
                     max=""
                     min=""
                     name="dateOfBirth"
                     value={contact.dateOfBirth}
                     placeholder="Enter date of birth"
                     className="form-control"
+                    aria-labelledby="dateOfBirthLabel"
                     required
                     onChange={handleInputChange}
-                  />
+                  />Date of birth is required
                 </div>
 
               </div>
