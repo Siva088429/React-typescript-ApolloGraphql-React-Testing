@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1673852958760" clover="3.2.0">
-  <project timestamp="1673852958760" name="All files">
-    <metrics statements="25" coveredstatements="19" conditionals="10" coveredconditionals="6" methods="8" coveredmethods="6" elements="43" coveredelements="31" complexity="0" loc="25" ncloc="25" packages="1" files="1" classes="1"/>
-    <file name="contact.creation.tsx" path="D:\react-typescript-graphql-master\client\src\components\contact\contact.creation.tsx">
-      <metrics statements="25" coveredstatements="19" conditionals="10" coveredconditionals="6" methods="8" coveredmethods="6"/>
-      <line num="11" count="2" type="stmt"/>
-      <line num="14" count="19" type="stmt"/>
-      <line num="21" count="19" type="stmt"/>
-      <line num="23" count="19" type="stmt"/>
-      <line num="26" count="19" type="stmt"/>
-      <line num="28" count="19" type="stmt"/>
-      <line num="29" count="16" type="cond" truecount="2" falsecount="2"/>
-      <line num="30" count="0" type="stmt"/>
-      <line num="31" count="0" type="stmt"/>
-      <line num="32" count="0" type="stmt"/>
-      <line num="37" count="19" type="stmt"/>
-      <line num="38" count="1" type="stmt"/>
-      <line num="41" count="19" type="stmt"/>
-      <line num="44" count="1" type="stmt"/>
-      <line num="46" count="1" type="cond" truecount="1" falsecount="1"/>
-      <line num="47" count="0" type="stmt"/>
-      <line num="53" count="0" type="stmt"/>
-      <line num="54" count="0" type="stmt"/>
-      <line num="57" count="1" type="stmt"/>
-      <line num="63" count="1" type="stmt"/>
-      <line num="70" count="19" type="stmt"/>
-      <line num="73" count="2" type="stmt"/>
-      <line num="75" count="2" type="stmt"/>
-      <line num="76" count="2" type="stmt"/>
-      <line num="79" count="19" type="stmt"/>
-    </file>
+<coverage generated="1673858467683" clover="3.2.0">
+  <project timestamp="1673858467683" name="All files">
+    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
   </project>
 </coverage>

@@ -34,14 +34,9 @@ describe('When every is Ok', () =>{
         render(<App />);
     });
     test('Data should be name text', () => {
-        // implicit assertion
-        // because getByText would throw error
-        // if element wouldn't be there
         render(<App />);
         screen.getByText('Name');
         screen.getByRole('heading');
-        // screen.getByText('Email');
-        // screen.getByDisplayValue('dateOfBirth');
         screen.debug();
     });
 });

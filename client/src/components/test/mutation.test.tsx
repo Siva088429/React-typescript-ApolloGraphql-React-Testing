@@ -38,6 +38,7 @@ describe('tests the createuser mutation', async () => {
             mutation: UpdateContactMutation
           }))  
     });
+    
     test(' Delete the data in the person list', () =>{
       const DeleteContactMutation  = gql`
         mutation deleteContact($id: ID!) {
