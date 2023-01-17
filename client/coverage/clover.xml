@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1673858467683" clover="3.2.0">
-  <project timestamp="1673858467683" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1673948710251" clover="3.2.0">
+  <project timestamp="1673948710251" name="All files">
+    <metrics statements="11" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0" elements="18" coveredelements="0" complexity="0" loc="11" ncloc="11" packages="2" files="2" classes="2"/>
+    <package name="src">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="AppRoutes.tsx" path="D:\react-typescript-graphql-master\client\src\AppRoutes.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.funnel">
+      <metrics statements="9" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="FunnelGraphExample.tsx" path="D:\react-typescript-graphql-master\client\src\components\funnel\FunnelGraphExample.tsx">
+        <metrics statements="9" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

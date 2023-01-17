@@ -36,7 +36,7 @@
     "src",
     "./jest.setup.ts",
     "./setupTests.ts"
-  ],
+, "src/components/funnel/FunnelGraphExample.tsx"  ],
   "exclude": [
     "node_modules",
     "dist",
